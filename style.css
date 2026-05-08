@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+  padding: 0px;
+}
+.page-title .text-credits {
+  font-size: small;
+}
+
+.click-counter {
+  font-size: 100px;
+  padding-bottom: 10px;
+}
+
+.click-area {
+  font-size: 100px;
+}
+
+.text-credits {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  color: gray;
+}
