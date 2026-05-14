@@ -2,6 +2,7 @@ let clickValue = 0;
 let upgradeCost = 10;
 let incrementValue = 1;
 let theme = "white";
+const buttons = document.querySelectorAll("button:not(.upgrade-btn)");
 const clickerBtn = document.querySelector(".click-area");
 const clickerCounter = document.querySelector(".click-counter");
 const themeBtn = document.querySelector(".theme-btn");
@@ -18,10 +19,20 @@ themeBtn.onclick = function () {
   if (theme === "white") {
     document.body.style.background = "black";
     document.body.style.color = "white";
+
+    buttons.forEach(function (btn) {
+      btn.style.filter = "invert(1)";
+    });
+
     theme = "black";
   } else {
     document.body.style.background = "white";
     document.body.style.color = "black";
+
+    buttons.forEach(function (btn) {
+      btn.style.filter = "invert(0)";
+    });
+
     theme = "white";
   }
 };
