@@ -1,11 +1,13 @@
 let clickValue = 0;
+let upgradeCost = 10;
 let incrementValue = 1;
 let theme = "white";
 const clickerBtn = document.querySelector(".click-area");
-const pageIncrementValue = document.querySelector(".increment-value");
 const clickerCounter = document.querySelector(".click-counter");
 const themeBtn = document.querySelector(".theme-btn");
 const upgradeBtn = document.querySelector(".upgrade-btn");
+const pageUpgradeCost = document.querySelector(".upgrade-cost");
+const pageIncrementValue = document.querySelector(".increment-value");
 
 clickerBtn.onclick = function () {
   clickValue += incrementValue;
@@ -25,6 +27,12 @@ themeBtn.onclick = function () {
 };
 
 upgradeBtn.onclick = function () {
-  incrementValue += 1;
-  pageIncrementValue.textContent = incrementValue;
+  if (clickValue >= upgradeCost) {
+    clickValue -= upgradeCost;
+    upgradeCost *= 2;
+    incrementValue += 1;
+    pageUpgradeCost.textContent = upgradeCost;
+    clickerCounter.textContent = clickValue;
+    pageIncrementValue.textContent = incrementValue;
+  }
 };
