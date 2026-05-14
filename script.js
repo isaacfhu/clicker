@@ -2,8 +2,10 @@ let clickValue = 0;
 let incrementValue = 1;
 let theme = "white";
 const clickerBtn = document.querySelector(".click-area");
+const pageIncrementValue = document.querySelector(".increment-value");
 const clickerCounter = document.querySelector(".click-counter");
 const themeBtn = document.querySelector(".theme-btn");
+const upgradeBtn = document.querySelector(".upgrade-btn");
 
 clickerBtn.onclick = function () {
   clickValue += incrementValue;
@@ -20,4 +22,9 @@ themeBtn.onclick = function () {
     document.body.style.color = "black";
     theme = "white";
   }
+};
+
+upgradeBtn.onclick = function () {
+  incrementValue += 1;
+  pageIncrementValue.textContent = incrementValue;
 };

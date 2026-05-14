@@ -4,6 +4,10 @@ body {
   align-items: center;
 }
 
+p {
+  margin: 0;
+}
+
 .page-header {
   display: flex;
   flex-flow: row wrap;
@@ -32,6 +36,28 @@ body {
   font-size: 100px;
 }
 
+.upgrades {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-top: 100px;
+}
+.upgrades div {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  border: solid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.upgrade-btn {
+  background-color: greenyellow;
+}
+
+.bold {
+  font-weight: bold;
+}
 .text-credits {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
